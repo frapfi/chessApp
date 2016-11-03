@@ -1,0 +1,21 @@
+
+<template name='users'>
+  <ul class='list-group'>
+	{{#each users}} <!-- Data context for this template is set to the "users" object -->
+	  {{> user}}
+	{{/each}}
+  </ul>
+</template>
+
+<template name='user'>
+  <li class='list-group-item'>
+	{{#if currentUser }}
+	  <button class='btn btn-default add'>
+		<!-- pass '_id' to the alreadyFriends functions -->
+		{{#if alreadyFriends _id}} - {{else}} + {{/if}}
+	  </button>
+	{{/if}}
+
+	{{username}}
+  </li>
+</template>

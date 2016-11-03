@@ -1,0 +1,9 @@
+<!-- Template block: ... -->
+<template name='requireLogin'>
+  {{#if currentUser}}
+	<!-- ... anything which is put inside the template tags is going to be rendered here -->
+	{{> Template.contentBlock}}
+  {{else}}
+	<h2> Please sign in above! </h2>
+  {{/if}}
+</template>
